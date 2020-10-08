@@ -99,6 +99,60 @@ for (let i = 1; i <= 10; i++){
 	// console.log('hello');
 	// console.log('hello'+i);
 	console.log(`hello ${i}`);
+	// if (条件)　continue; でスキップ breakで処理終了
 }
+
+let hp = 100;
+while(hp > 0){
+	console.log(`${hp}HP left!`);
+	hp -= 15;
+}
+
+//　一連の処理を関数でまとめて呼び出す
+//仮引数(message(='AD'は初期値設定。))を設定して実引数(Header/Footer)を入れるとその通り表示される
+//実引数がないと初期値が返される
+function showAd(message='Ad'){
+	console.log('----------');
+	console.log(`------${message} --------`);
+	console.log('----------');
+}
+
+showAd('Header');
+showAd('Footer');
+showAd();
+
+// return
+function sum(a, b, c){
+	// console.log(a+b+c);
+	return a + b + c;
+	//returnの下に処理を書いても処理されない
+}
+
+sum(1,2,3);
+sum(3,4,5);
+
+const total = sum(1,2,3)+sum(3,4,5);
+console.log(total);
+
+// 関数式
+const add = (a, b, c)=>a + b + c;
+// ↑短縮系 引数が１つの場合()は不要
+// const add = function(a, b, c){
+// 	return a + b + c;
+// };
+
+const answer = add(1,2,3)+add(3,4,5);
+console.log(answer);
+
+
+
+
+
+
+
+
+
+
+
 
 
